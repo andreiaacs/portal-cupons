@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/images/icone.svg" width="60" height="60" alt="">
+    </a>
+</nav>
+
+<h1>Olá, Fulano.</h1>
+<h2>Esses são os cupons disponíveis para você.</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let item of items; index as i;">
+            <div class="card-group">
+                <div class="card style='width: 50px;'">
+                    <a href="">
+                        <img class="card-img-top " src="../../assets/images/cupom.png " alt="Card image cap">
+                        <div class="card-body ">
+                            <h5 class="card-title ">{{ item.nome }}</h5>
+                            <p class="card-text ">{{ item.descricao }}</p>
+                            <p class="card-text "><small class="text-muted ">{{ item.validade }}</small></p>
+                            <a href="#" class="btn btn-dark">Mais</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer font-small text-white bg-dark">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
+</footer>
